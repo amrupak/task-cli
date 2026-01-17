@@ -1,0 +1,19 @@
+# Compiled files
+*.class
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+
+# Jar output
+*.jar
+
+# Data file (optional – discuss later)
+tasks.json
