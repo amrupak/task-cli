@@ -6,7 +6,7 @@ public class Task {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     
-
+    //constructor
     public Task( int id, String description){
         this.id = id;
         this.description = description;
@@ -17,7 +17,7 @@ public class Task {
     public void touchUpdatedAt(){
         this.updatedAt = LocalDateTime.now();
     }
-
+    //getter
     public int getId(){
         return id;
     }
@@ -41,6 +41,15 @@ public class Task {
     public void markDone(){
         this.status = "done";
         touchUpdatedAt();
+    }
+
+    public static Task fromFile(int id, String description, String status,LocalDateTime createdAt, LocalDateTime updatedAt){
+        Task t = new Task(id, description);
+        t.status = status;
+        t.createdAt = createdAt;
+        t.updatedAt = updatedAt;
+        return t;
+
     }
               
 }
